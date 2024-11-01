@@ -27,6 +27,7 @@ type Response struct {
 // TODO: mb move to config
 const aliasLength = 6
 
+//go:generate go run github.com/vektra/mockery/v2@v2.46.3 --name=URLSaver
 type URLSaver interface {
 	SaveURL(urlToSave string, alias string) (int64, error)
 }
